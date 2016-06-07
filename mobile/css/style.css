@@ -1,0 +1,231 @@
+#contenedor-general{width:100%;}
+#menu-secciones{width:50%;margin-left:26%;}
+#boton-home{margin-top:4px;}
+#boton-salir{margin-top:4px;}
+
+#plano-principal{width:100%;}
+div.area-plano{position:absolute;}
+#contenido-seccion{position:relative;}
+.relativizador{position:relative;}
+.absolutizador{position:absolute;}
+
+/* MAPEO PLANO PRINCIPAL CASA */
+#salon{height:42.4%;width:32.8%;top:29.6%;left:64.8%;}
+#habitacion1{height:26.7%;width:27.7%;top:29.6%;left:2.5%;}
+#habitacion2{height:22.8%;width:21.9%;top:73.7%;left:2.5%;}
+#habitacion3{height:22.8%;width:22.6%;top:73.7%;left:25.6%;}
+#banio1{height:13.9%;width:13.4%;top:58%;left:2.5%;}
+#banio2{height:22.8%;width:6.3%;top:73.7%;left:91.3%;}
+#cocina{height:22.8%;width:25.5%;top:73.7%;left:64.7%;}
+#terraza1{height:23.9%;width:27.7%;top:3.9%;left:2.5%;}
+#terraza2{height:9.9%;width:35.7%;top:3.9%;left:29.5%;}
+#terraza3{height:23.9%;width:32.8%;top:3.9%;left:64.8%;}
+#recibidor{height:38.5%;width:14.4%;top:58%;left:49.3%;}
+#pasillo{height:14%;width:31.2%;top:58%;left:17%;}
+/* FIN MAPEO PLANO PRINCIPAL CASA */
+
+/* REPARTO DE LOS COMPONENTES */
+@media screen and (min-width: 480px) {
+	#reloj{margin-top:10px;margin-left:10px;}
+	#termometro{width:233px;margin:30px auto;position:absolute;margin-top:50px;/*margin-left:30px;*/}
+	#iluminacion{position:absolute;/*right:380px;*/right:280px;}
+	#persiana{position:absolute;/*right:420px;margin-top:185px;*/margin-top:110px;right:320px;}
+}
+@media screen and (max-width: 480px) {
+	#reloj{margin-top:10px;margin-left:10px;}
+	#termometro{width:233px;margin:30px auto;position:absolute;margin-top:50px;/*margin-left:30px;*/}
+	#iluminacion{position:absolute;margin-left:-130px;margin-top:250px;}
+	#persiana{position:absolute;/*right:420px;margin-top:185px;*/margin-top:250px;margin-left:-30px;}
+}
+/* FIN DE REPARTO DE LOS COMPONENTES */
+
+/* ESTILOS PARA EL RELOJ */
+div.digito{float:left;width:20px;height:26px;background-image:url('../img/hud_numbers.png');background-position:0px 0px;background-repeat:no-repeat;}
+#hora1{margin-left:0px;}
+#hora0{margin-left:2px;}
+#minuto1{margin-left:10px;}
+#minuto0{margin-left:2px;}
+#segundo1{margin-left:10px;}
+#segundo0{margin-left:2px;}
+/* FIN ESTILOS PARA EL RELOJ */
+
+/*ESTILOS DEL TERMÓMETRO*/
+#boton-encender-temp{position:absolute;top:21px;left:21px;height:57;width:59;z-index:100;}
+
+.thermometer {
+    float: left;
+    margin:0 20px;
+}
+.thermometer {
+    /*width:70px;*/
+    width:50px;
+    /*height:300px;*/
+    height:160px;
+    position: relative;
+    background: #ddd;
+    border:1px solid #aaa;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+         -o-border-radius: 12px;
+            border-radius: 12px;
+
+    -webkit-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+       -moz-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+        -ms-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+         -o-box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+            box-shadow: 1px 1px 4px #999, 5px 0 20px #999;
+}
+
+.thermometer .track {
+    /*height:280px;*/
+    height:140px;
+    top:10px;
+    width:20px;
+    border: 1px solid #aaa;
+    position: relative;
+    margin:0 auto;
+    background: rgb(255,255,255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(0,0,0)), color-stop(1%,rgb(255,255,255)));
+    background: -webkit-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:      -o-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:     -ms-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:    -moz-linear-gradient(top, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:   linear-gradient(to bottom, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background-position: 0 -1px;
+    background-size: 100% 5%;
+}
+
+.thermometer .progress {
+    height:0%;
+    width:100%;
+    /*background: rgb(20,100,20);
+    background: rgba(20,100,20,0.6);*/
+    /*background: -webkit-linear-gradient(bottom, rgb(0,0,255) 80px, rgb(0,255,0) 128px, rgb(255,0,0) 196px);
+    background: -o-linear-gradient(bottom, rgb(0,0,255) 80px, rgb(0,255,0) 128px, rgb(255,0,0) 196px);
+    background: -ms-linear-gradient(bottom, rgb(0,0,255) 80px, rgb(0,255,0) 128px, rgb(255,0,0) 196px);
+    background: -moz-linear-gradient(bottom, rgb(0,0,255) 80px, rgb(0,255,0) 128px, rgb(255,0,0) 196px);*/
+    background: -webkit-linear-gradient(bottom, rgb(0,0,255) 40px, rgb(0,255,0) 64px, rgb(255,0,0) 98px);
+    background: -o-linear-gradient(bottom, rgb(0,0,255) 40px, rgb(0,255,0) 64px, rgb(255,0,0) 98px);
+    background: -ms-linear-gradient(bottom, rgb(0,0,255) 40px, rgb(0,255,0) 64px, rgb(255,0,0) 98px);
+    background: -moz-linear-gradient(bottom, rgb(0,0,255) 40px, rgb(0,255,0) 64px, rgb(255,0,0) 98px);
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+
+.thermometer .goal {
+    position:absolute;
+    top:0;
+}
+
+.thermometer .amount {
+    display: inline-block;
+    /*padding:0 5px 0 60px;*/
+    padding:0 5px 0 40px;
+    border-top:1px solid black;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    color:#333;
+}
+
+.thermometer .progress .amount {
+    /*padding:0 60px 0 5px;*/
+    /*padding:0 5px 0 60px;*/
+    padding:0 5px 0 40px;
+    position: absolute;
+    border-top:1px solid #060;
+    color:#060;
+    /*right:-103px;*/
+    right:-84px;
+}
+
+
+
+.thermometer.horizontal {
+    margin:100px auto;
+}
+
+.thermometer.horizontal {
+    width:350px;
+    height:70px;
+}
+
+.thermometer.horizontal .track {
+    width:90%;
+    left:0;
+    height:20px;
+    margin:14px auto;
+
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgb(0,0,0)), color-stop(1%,rgb(255,255,255)));
+    background: -webkit-linear-gradient(left, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:      -o-linear-gradient(left, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:     -ms-linear-gradient(left, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:    -moz-linear-gradient(left, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background:   linear-gradient(to right, rgb(0,0,0) 0%,rgb(255,255,255) 10%);
+    background-size: 5% 100%;
+}
+
+.thermometer.horizontal .progress {
+    height:100%;
+    width:0%;
+}
+
+.thermometer.horizontal .goal {
+    left:100%;
+    height:100%;
+}
+
+.thermometer.horizontal .amount {
+    bottom:0;
+    position: absolute;
+    padding:0 5px 50px 5px;
+    border-top:0;
+    border-left:1px solid black;
+
+}
+
+.thermometer.horizontal .progress .amount {
+    border-left:0;
+    border-top:0;
+    border-right:1px solid #060;
+}
+@media screen and (min-width: 480px) {
+	#absolutizador-termometro{/*margin-left:190px;*/margin-left:120px;}
+	#temp-deseada{position:absolute;margin-left:20px;/*margin-top:60px;*/margin-top:25px;}
+	#indictempdeseada{margin-left:10px;}
+}
+@media screen and (max-width: 480px) {
+	#absolutizador-termometro{/*margin-left:190px;*/margin-left:10px;}
+	#temp-deseada{position:absolute;margin-left:170px;/*margin-top:60px;*/margin-top:25px;}
+	#indictempdeseada{margin-left:110px;}
+}
+/*#thermo1{transform:rotate(-90deg);-moz-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);}*/
+/*FIN DE ESTILOS DEL TERMÓMETRO*/
+
+/*ESTILOS DE LA ILUMINACIÓN*/
+#divcontroluz{position:absolute;margin-left:160px}
+#divindicaluz{position:absolute;background: url("../img/bombilla.png") no-repeat scroll -150px 0 rgba(0, 0, 0, 0);/*margin-top:15px*/margin-top:-10px}
+#divbombilla{background: url("../img/bombilla.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);height: 150px;width: 150px;opacity:1}
+#boton-encender-luz{position:absolute;top:21px;left:21px;height:57;width:59;z-index:100;}
+#divcontrolautoluz{position:absolute;top:140px;left:130px;}
+#divcontrolautoluz button.btn-danger{color: #ffffff;background-color: #da4f49;}
+#divcontrolautoluz button.btn-success{color: #ffffff;background-color: #51a351;}
+/*FIN DE ESTILOS DE LA ILUMINACIÓN*/
+
+/*ESTILOS DE LAS PERSIANA*/
+#divcontrolpersiana{position:absolute;margin-left:200px;}
+#divindicapersiana{position:absolute;}
+/*FIN DE ESTILO DE LAS PERSIANAS*/
+
+/*ESTILOS DE BOTÓN DE RESET*/
+#divreset{position:absolute;margin-left:200px;}
+/*FIN DE ESTILO DE BOTÓN DE RESET*/
+
+/*ESTILOS DE LA GRÁFICA*/
+/*#divgrafico{position:absolute;margin-top:40px;margin-left:130px;}
+#grafico{}*/
+#divgrafica{position:absolute;width:1000px;height:450px;margin-top:50px;margin-left:100px;}
+#grafica{position:absolute;width:1000px;height:450px;}
+/*FIN DE ESTILOS DE LA GRÁFICA*/
+

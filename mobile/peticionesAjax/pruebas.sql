@@ -1,0 +1,1 @@
+SELECT valores.valor AS valor, valores.fecha AS fecha, valores.idvariable AS idvariable, zonas.idcontrolador as idcontrolador FROM (SELECT valor, fecha, idvariable, idzona FROM registrovars WHERE fecha BETWEEN "2014-04-06 22:21:36" AND "2014-04-10 18:51:02") AS valores LEFT JOIN zonas ON zonas.id = valores.idzona
